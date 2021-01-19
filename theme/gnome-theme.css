@@ -1,0 +1,71 @@
+@import "parts/buttons.css";
+@import "parts/entries.css";
+@import "parts/toolbox.css";
+@import "parts/headerbar.css";
+/* @import "parts/csd.css"; */
+@import "parts/tabsbar.css";
+@import "parts/findbar.css";
+@import "parts/sidebar.css";
+/* @import "parts/contextmenu.css; */
+/* @import "popups-contents.css"; */
+@import "parts/popups.css";
+@import "parts/contextmenu.css;
+@import "parts/remove-white-flash.css";
+@import "parts/icons.css";
+@import "colors/dark.css";
+@import "colors/light.css";
+/* @import "colors/dark-maia.css"; */
+/* @import "colors/light-maia.css"; */
+/* @import "colors/dark-yaru.css"; */
+/* @import "colors/light-yaru.css"; */
+/* @import "system-icons.css"; */
+/* @import "symbolic-tab-icons.css"; */
+/*@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";*/
+
+/* Set theme version text in customization panel */
+#customization-footer::before {
+	background: url(../icon.svg) no-repeat;
+	background-size: contain;
+	content: "Firefox GNOME theme v82";
+	padding: 9px 9px 9px 50px;
+}
+
+
+#TabsToolbar > .titlebar-buttonbox-container, #window-controls {display: none !important}
+Remove close and minimize buttons from fullscreen buttons
+:root[tabsintitlebar] #window-controls #close-button,
+:root[tabsintitlebar] #window-controls #minimize-button,
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
+	display: none !important;
+}
+
+/* Sets the urlbar input text color */
+#urlbar .urlbar-input-box {
+    color: var(--gnome-entry-color) !important;
+	text-align: center !important;
+}
+
+
+/* NEED ALL OF THE BELOW FROM CSD.CSS TO MAKE SOME THINGS NORMAL*/
+
+/* Remove tabsbar titlebar blank spaces */
+:root[tabsintitlebar] #TabsToolbar .titlebar-placeholder {
+	display: none !important;
+}
+
+/* Prevent menubar from breaking */
+:root[tabsintitlebar] #toolbar-menubar:not([inactive=true]) {
+	height: 30px !important;
+	margin-bottom: 8px;
+}
+
+/* Remove default style of titlebar */
+:root[tabsintitlebar] #titlebar {
+	-moz-appearance: none !important;
+}
+
+/* Fix the issue when dragging tabs */
+:root[tabsintitlebar] #navigator-toolbox[movingtab] #TabsToolbar {
+	padding-bottom: 0 !important;
+}
+
