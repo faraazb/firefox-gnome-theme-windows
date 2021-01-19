@@ -11,6 +11,7 @@ I also use a scrollbar userscript(scroll.uc.js), a userscript to darken all tool
 <br/><br/>
 There are two color schemes called maia and yaru for both dark and light themes. You can enable them by uncommenting the relevant imports in gnome-theme.css.
 <br/><br/>
+The treestyletab.css is from https://github.com/not-holar/my_firefox_theme
 
 ## Screenshots
 
